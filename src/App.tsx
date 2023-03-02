@@ -6,8 +6,7 @@ function App() {
   const user = useSelector((state: AppStore) => state.user);
   return (
     <div className="App">
-      <span>{JSON.stringify(user)}</span>
-      <Login />
+      {user.name ? <Home img={user.image} name={user.name} /> : <Login />}
     </div>
   )
 }
