@@ -6,7 +6,9 @@ function App() {
   const user = useSelector((state: AppStore) => state.user);
   return (
     <div className="App">
-      {user.name ? <Home img={user.image} name={user.name} /> : <Login />}
+      <div className="flex items-center justify-center h-screen">
+        {user.name ? <Home img={user.image} name={user.name} /> : <Login />}
+      </div>
     </div>
   )
 }
